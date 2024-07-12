@@ -16,15 +16,15 @@ libs = ["lib"]
 
 [rpc_endpoints]
 anvil = "http://127.0.0.1:8545"
-polygon-pos = "https://polygon-rpc.com"
-optimistic = "https://rpc.ankr.com/optimism"
+polygon-pos = "https://1rpc.io/matic"
+optimistic = "https://1rpc.io/op"
 arbitrum = "https://arb1.arbitrum.io/rpc"
 linea = "https://rpc.linea.build"
 ethereum = "https://rpc.ankr.com/eth"
 blast = "https://rpc.blast.io"
 polygon-zkevm = "https://zkevm-rpc.com"
 darwinia = "https://darwinia-rpc.itering.io"
-bsc = "https://rpc.ankr.com/bsc"
+bsc = "https://bscrpc.com"
 base = "https://mainnet.base.org"
 gnosis = "https://rpc.gnosischain.com"
 mantle = "https://rpc.mantle.xyz"
