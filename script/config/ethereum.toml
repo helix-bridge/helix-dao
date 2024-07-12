@@ -27,3 +27,9 @@ symbols = ["ring"]
 address = "0x9469D013805bFfB7D3DEBe5E7839237e535ec483"
 decimals = 18
 protocolFee = 100000000
+
+
+[token.eth]
+address = "0x0000000000000000000000000000000000000000"
+decimals = 18
+protocolFee = 10000000000000
