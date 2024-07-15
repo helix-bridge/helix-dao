@@ -18,8 +18,9 @@ contract RegisterUsdcToken12 is LnBridgeV3Base {
         require(localTokenInfo.token != address(0), "local token not configured");
         // check the decimals
         checkTokenAddressOnChain("usdc");
-        for (uint idx = 0; idx < sphinxConfig.mainnets.length; idx++) {
-            string memory remoteChainName = sphinxConfig.mainnets[idx];
+        string[7] memory allConnectedChains = ["arbitrum", "scroll", "polygon-pos", "bsc", "base", "gnosis", "optimistic"];
+        for (uint idx = 0; idx < allConnectedChains.length; idx++) {
+            string memory remoteChainName = allConnectedChains[idx];
             uint256 remoteChainId = chainName2chainId[remoteChainName];
             if (remoteChainId == block.chainid) {
                 continue;
