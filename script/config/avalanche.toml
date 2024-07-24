@@ -1,0 +1,29 @@
+[base]
+name = "avalanche"
+chainId = 43114
+deployer = "0x80D4c766C5142D1313D531Afe7384D0D5E108Db3"
+bridgev3 = "0xbA5D580B18b6436411562981e02c8A9aA1776D10"
+proxyAdmin = "0x601dE3B81c7cE04BecE3b29e5cEe4F3251d250dB"
+
+[messager]
+[messager.messagers]
+types = ["layerzero"]
+
+[messager.layerzero]
+id = 106
+messager = "0x61B6B8c7C00aA7F060a2BEDeE6b11927CC9c3eF1"
+endpoint = "0x3c2269811836af69497E5F486A85D7316753cf62"
+
+[token]
+[token.symbols]
+symbols = ["usdt", "usdc"]
+
+[token.usdt]
+address = "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7"
+decimals = 6
+protocolFee = 100000
+
+[token.usdc]
+address = "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E"
+decimals = 6
+protocolFee = 100000
