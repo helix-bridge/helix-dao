@@ -16,9 +16,14 @@ endpoint = "0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7"
 
 [token]
 [token.symbols]
-symbols = ["usdt"]
+symbols = ["usdt", "eth"]
 
 [token.usdt]
 address = "0xA219439258ca9da29E9Cc4cE5596924745e12B93"
 decimals = 6
 protocolFee = 100000
+
+[token.eth]
+address = "0x0000000000000000000000000000000000000000"
+decimals = 18
+protocolFee = 10000000000000
