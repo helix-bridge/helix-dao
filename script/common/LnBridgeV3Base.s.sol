@@ -158,7 +158,7 @@ contract LnBridgeV3Base is Base {
         messagerName2messagerType['msgport'] = MessagerType.MsgportType;
         messagerName2messagerType['eth2arb'] = MessagerType.Eth2ArbType;
 
-        string[16] memory chains = ["arbitrum", "astar-zkevm", "base", "blast", "bsc", "ethereum", "gnosis", "linea", "mantle", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "darwinia", "moonbeam", "crab"];
+        string[17] memory chains = ["arbitrum", "astar-zkevm", "base", "blast", "bsc", "ethereum", "gnosis", "linea", "mantle", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "darwinia", "moonbeam", "crab", "avalanche"];
         for (uint i = 0; i < chains.length; i++) {
             readConfig(chains[i]);
         }
@@ -178,7 +178,7 @@ contract LnBridgeV3Base is Base {
         string[] memory messagerNames = config.readStringArray(".messager.messagers.types");
         for (uint i = 0; i < messagerNames.length; i++) {
             string memory messagerName = messagerNames[i];
-            configureMessager(config, messagerName);
+            configureMessager(chainId, config, messagerName);
         }
         string[] memory tokenSymbols = config.readStringArray(".token.symbols.symbols");
         for (uint i = 0; i < tokenSymbols.length; i++) {
@@ -187,7 +187,7 @@ contract LnBridgeV3Base is Base {
         }
     }
 
-    function configureMessager(string memory config, string memory messagerName) internal {
+    function configureMessager(uint256 chainId, string memory config, string memory messagerName) internal {
         MessagerType messagerType = messagerName2messagerType[messagerName];
         string memory channelIdKey = string.concat(".messager.", messagerName, ".id");
         string memory channelAddressKey = string.concat(".messager.", messagerName, ".messager");
@@ -196,7 +196,7 @@ contract LnBridgeV3Base is Base {
         address messagerAddress = config.readAddress(channelAddressKey);
         address endpoint = config.readAddress(channelLowAddressKey);
 
-        bytes32 key = keccak256(abi.encodePacked(msgChainId, messagerType));
+        bytes32 key = keccak256(abi.encodePacked(chainId, messagerType));
         messagers[key] = MessagerInfo(messagerAddress, endpoint, msgChainId);
     }
 
