@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {AddAvalancheMantle13} from "../13_AddAvalancheMantle.s.sol";
+import {RegisterUsdtBtc14} from "../14_RegisterUsdtBtc.s.sol";
 
-contract Proposal is AddAvalancheMantle13 {}
+contract Proposal is RegisterUsdtBtc14 {}

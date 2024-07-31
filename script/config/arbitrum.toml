@@ -26,7 +26,7 @@ endpoint = "0x2cd1867Fb8016f93710B6386f7f9F1D540A60812"
 
 [token]
 [token.symbols]
-symbols = ["ring", "usdt", "usdc", "eth"]
+symbols = ["ring", "usdt", "usdc", "eth", "wbtc"]
 
 [token.ring]
 address = "0x9e523234D36973f9e38642886197D023C88e307e"
@@ -47,3 +47,9 @@ protocolFee = 100000
 address = "0x0000000000000000000000000000000000000000"
 decimals = 18
 protocolFee = 10000000000000
+
+[token.wbtc]
+address = "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f"
+decimals = 8
+protocolFee = 15
+
