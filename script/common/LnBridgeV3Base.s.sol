@@ -217,7 +217,7 @@ contract LnBridgeV3Base is Base {
         uint8 tokenDecimals = uint8(config.readUint(tokenDecimalsKey));
         uint112 protocolFee = uint112(config.readUint(tokenProtocolFeeKey));
         // the decimals saved in toml file is 6
-        //protocolFee = uint112(protocolFee * 10 ** tokenDecimals / 10 ** 6);
+        protocolFee = uint112(protocolFee * 10 ** tokenDecimals / 10 ** 6);
         bytes32 key = keccak256(abi.encodePacked(chainId, symbol));
         tokens[key] = TokenInfo(tokenAddress, tokenDecimals, symbol, protocolFee, true);
     }

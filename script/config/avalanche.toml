@@ -31,4 +31,4 @@ protocolFee = 100000
 [token.wbtc]
 address = "0x152b9d0FdC40C096757F570A51E494bd4b943E50"
 decimals = 8
-protocolFee = 15
+protocolFee = 1
