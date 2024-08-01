@@ -13,13 +13,10 @@ contract UpdateProtocolFee15 is LnBridgeV3Base {
         uint256 CHAINID_AVALANCHE = chainName2chainId["avalanche"];
 
         uint256 CHAINID_ARBITRUM = chainName2chainId["arbitrum"];
-        uint256 CHAINID_SCROLL = chainName2chainId["scroll"];
-        uint256 CHAINID_BASE = chainName2chainId["base"];
         uint256 CHAINID_OPTIMISTIC = chainName2chainId["optimistic"];
 
         uint256 chainId = block.chainid;
 
-        bool isEthNative = chainId == CHAINID_ARBITRUM || chainId == CHAINID_SCROLL || chainId == CHAINID_BASE || chainId == CHAINID_OPTIMISTIC;
         bool hasUsdtBtc = chainId == CHAINID_ARBITRUM || chainId == CHAINID_BSC || chainId == CHAINID_OPTIMISTIC || chainId == CHAINID_POLYGON || chainId == CHAINID_AVALANCHE;
 
         string[5] memory usdtAndWbtcChains = ["arbitrum", "polygon-pos", "bsc", "optimistic", "avalanche"];
@@ -43,9 +40,6 @@ contract UpdateProtocolFee15 is LnBridgeV3Base {
             require(usdcRemote.token != address(0), "remote usdt not configured");
             uint256 usdcPenalty = 2 * 10 ** usdc.decimals;
             updateToken(remoteChainId, usdc.symbol, usdcRemote.symbol, usdc.protocolFee, uint112(usdcPenalty));
-            if (isEthNative) {
-                updateToken(remoteChainId, "eth", "eth", 10000000000000, 1000000000000000);
-            }
         }
 
         if (!hasUsdtBtc) {
