@@ -24,11 +24,7 @@ contract UpdateProtocolFee15 is LnBridgeV3Base {
 
 
         TokenInfo memory usdc = getTokenFromConfigure(block.chainid, "usdc");
-        require(usdc.token != address(0), "local token not configured");
-        TokenInfo memory usdt = getTokenFromConfigure(block.chainid, "usdt");
-        require(usdt.token != address(0), "local token not configured");
-        TokenInfo memory wbtc = getTokenFromConfigure(block.chainid, "wbtc");
-        require(wbtc.token != address(0), "local token not configured");
+        require(usdc.token != address(0), "usdc token not configured");
 
         for (uint idx = 0; idx < allChains.length; idx++) {
             string memory remoteChainName = allChains[idx];
@@ -45,6 +41,10 @@ contract UpdateProtocolFee15 is LnBridgeV3Base {
         if (!hasUsdtBtc) {
             return;
         }
+        TokenInfo memory usdt = getTokenFromConfigure(block.chainid, "usdt");
+        require(usdt.token != address(0), "usdt token not configured");
+        TokenInfo memory wbtc = getTokenFromConfigure(block.chainid, "wbtc");
+        require(wbtc.token != address(0), "wbtc token not configured");
         for (uint idx = 0; idx < usdtAndWbtcChains.length; idx++) {
             string memory remoteChainName = usdtAndWbtcChains[idx];
             uint256 remoteChainId = chainName2chainId[remoteChainName];
