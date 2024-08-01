@@ -7,6 +7,6 @@ import "@sphinx-labs/contracts/SphinxPlugin.sol";
 contract Base is Sphinx, Script {
     function configureSphinx() public override {
         sphinxConfig.projectName = "Helix-DAO";
-        sphinxConfig.mainnets = ["arbitrum", "polygon-pos", "bsc", "optimistic", "avalanche"];
+        sphinxConfig.mainnets = ["arbitrum", "polygon-pos", "bsc", "optimistic"];
     }
 }
