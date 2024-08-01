@@ -50,6 +50,15 @@ interface ILnv3Bridge {
         uint8 targetDecimals,
         uint32 index
     ) external;
+    function updateTokenInfo(
+        uint256 remoteChainId,
+        address sourceToken,
+        address targetToken,
+        uint112 protocolFee,
+        uint112 penalty,
+        uint8 sourceDecimals,
+        uint8 targetDecimals
+    ) external;
     function dao() view external returns(address);
     function pendingDao() view external returns(address);
     function acceptOwnership() external;
@@ -208,7 +217,7 @@ contract LnBridgeV3Base is Base {
         uint8 tokenDecimals = uint8(config.readUint(tokenDecimalsKey));
         uint112 protocolFee = uint112(config.readUint(tokenProtocolFeeKey));
         // the decimals saved in toml file is 6
-        protocolFee = uint112(protocolFee * 10 ** tokenDecimals / 10 ** 6);
+        //protocolFee = uint112(protocolFee * 10 ** tokenDecimals / 10 ** 6);
         bytes32 key = keccak256(abi.encodePacked(chainId, symbol));
         tokens[key] = TokenInfo(tokenAddress, tokenDecimals, symbol, protocolFee, true);
     }
@@ -291,6 +300,42 @@ contract LnBridgeV3Base is Base {
         if (receiver != localMessager.messager) {
             ILnv3Bridge(localBridge.bridger).setReceiveService(remoteChainId, remoteBridge.bridger, localMessager.messager);
         }
+    }
+
+    function updateToken(
+        uint256 remoteChainId,
+        string memory localSymbol,
+        string memory remoteSymbol,
+        uint112 protocolFee,
+        uint112 penalty
+    ) public {
+        uint256 localChainId = block.chainid;
+        TokenInfo memory localInfo = getTokenFromConfigure(localChainId, localSymbol);
+        require(localInfo.configured, "local token not exist");
+        TokenInfo memory remoteInfo = getTokenFromConfigure(remoteChainId, remoteSymbol);
+        require(remoteInfo.configured, "remote token not exist");
+
+        BridgeInfo memory localBridge = bridgerInfos[localChainId];
+        require(localBridge.bridger != address(0), "invalid local bridge");
+        bytes32 key = ILnv3Bridge(localBridge.bridger).getTokenKey(remoteChainId, localInfo.token, remoteInfo.token);
+        ILnv3Bridge.TokenInfo memory tokenInfo = ILnv3Bridge(localBridge.bridger).tokenInfos(key);
+        require(tokenInfo.index > 0, "token not exist");
+        if (tokenInfo.config.penalty == penalty && tokenInfo.config.protocolFee == protocolFee) {
+            return;
+        }
+        if (tokenInfo.config.sourceDecimals != localInfo.decimals || tokenInfo.config.targetDecimals != remoteInfo.decimals) {
+            return;
+        }
+
+        ILnv3Bridge(localBridge.bridger).updateTokenInfo(
+            remoteChainId,
+            localInfo.token,
+            remoteInfo.token,
+            protocolFee,
+            penalty,
+            localInfo.decimals,
+            remoteInfo.decimals
+        );
     }
 
     // register token
