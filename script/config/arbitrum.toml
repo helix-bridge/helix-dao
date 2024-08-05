@@ -46,10 +46,10 @@ protocolFee = 100000
 [token.eth]
 address = "0x0000000000000000000000000000000000000000"
 decimals = 18
-protocolFee = 10000000000000
+protocolFee = 10
 
 [token.wbtc]
 address = "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f"
 decimals = 8
-protocolFee = 15
+protocolFee = 1
 

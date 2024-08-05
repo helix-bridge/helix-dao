@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {RegisterUsdtBtc14} from "../14_RegisterUsdtBtc.s.sol";
+import {UpdateProtocolFee15} from "../15_UpdateProtocolFee.s.sol";
 
-contract Proposal is RegisterUsdtBtc14 {}
+contract Proposal is UpdateProtocolFee15 {}

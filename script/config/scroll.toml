@@ -31,4 +31,4 @@ protocolFee = 100000
 [token.eth]
 address = "0x0000000000000000000000000000000000000000"
 decimals = 18
-protocolFee = 10000000000000
+protocolFee = 10
