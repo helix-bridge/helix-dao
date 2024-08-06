@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {UpdateProtocolFee15} from "../15_UpdateProtocolFee.s.sol";
+import {RegisterDaiLink16} from "../16_RegisterDaiLink.s.sol";
 
-contract Proposal is UpdateProtocolFee15 {}
+contract Proposal is RegisterDaiLink16 {}

@@ -16,7 +16,7 @@ endpoint = "0x3c2269811836af69497E5F486A85D7316753cf62"
 
 [token]
 [token.symbols]
-symbols = ["usdt", "usdc", "eth", "wbtc"]
+symbols = ["usdt", "usdc", "eth", "wbtc", "dai", "link"]
 
 [token.usdt]
 address = "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
@@ -38,3 +38,12 @@ address = "0x68f180fcCe6836688e9084f035309E29Bf0A2095"
 decimals = 8
 protocolFee = 1
 
+[token.dai]
+address = "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1"
+decimals = 18
+protocolFee = 10000
+
+[token.link]
+address = "0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6"
+decimals = 18
+protocolFee = 1000
