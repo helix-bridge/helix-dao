@@ -7,12 +7,17 @@ proxyAdmin = "0x601dE3B81c7cE04BecE3b29e5cEe4F3251d250dB"
 
 [messager]
 [messager.messagers]
-types = ["layerzero"]
+types = ["layerzero", "msgport"]
 
 [messager.layerzero]
 id = 126
 messager = "0x61B6B8c7C00aA7F060a2BEDeE6b11927CC9c3eF1"
 endpoint = "0x9740FF91F1985D8d2B71494aE1A2f723bb3Ed9E4"
+
+[messager.msgport]
+id = 1284
+messager = "0x65Be094765731F394bc6d9DF53bDF3376F1Fc8B0"
+endpoint = "0x2cd1867Fb8016f93710B6386f7f9F1D540A60812"
 
 [token]
 [token.symbols]
