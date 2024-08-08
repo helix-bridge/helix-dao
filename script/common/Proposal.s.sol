@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {AddZircuitEth18} from "../18_AddZircuitEth.s.sol";
+import {RepairArbitrumZircuit19} from "../19_RepairArbitrumZircuit.s.sol";
 
-contract Proposal is AddZircuitEth18 {}
+contract Proposal is RepairArbitrumZircuit19 {}
