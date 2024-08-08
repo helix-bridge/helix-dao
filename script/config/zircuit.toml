@@ -1,4 +1,4 @@
-[zircuit]
+[base]
 name = "zircuit"
 chainId = 48900
 deployer = "0x80D4c766C5142D1313D531Afe7384D0D5E108Db3"
