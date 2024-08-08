@@ -7,7 +7,7 @@ proxyAdmin = "0x601dE3B81c7cE04BecE3b29e5cEe4F3251d250dB"
 
 [messager]
 [messager.messagers]
-types = ["layerzero"]
+types = ["layerzero", "msgport"]
 
 [messager.layerzero]
 id = 109
