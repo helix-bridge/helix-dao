@@ -167,7 +167,7 @@ contract LnBridgeV3Base is Base {
         messagerName2messagerType['msgport'] = MessagerType.MsgportType;
         messagerName2messagerType['eth2arb'] = MessagerType.Eth2ArbType;
 
-        string[17] memory chains = ["arbitrum", "astar-zkevm", "base", "blast", "bsc", "ethereum", "gnosis", "linea", "mantle", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "darwinia", "moonbeam", "crab", "avalanche"];
+        string[18] memory chains = ["arbitrum", "astar-zkevm", "base", "blast", "bsc", "ethereum", "gnosis", "linea", "mantle", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "darwinia", "moonbeam", "crab", "avalanche", "zircuit"];
         for (uint i = 0; i < chains.length; i++) {
             readConfig(chains[i]);
         }
