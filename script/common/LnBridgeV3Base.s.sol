@@ -294,12 +294,12 @@ contract LnBridgeV3Base is Base {
         require(localMessager.messager != address(0), "local message not exist");
 
         (address sender, address receiver) = getMessager(localChainId, remoteChainId);
-        if (sender != localMessager.messager) {
+        //if (sender != localMessager.messager) {
             ILnv3Bridge(localBridge.bridger).setSendService(remoteChainId, remoteBridge.bridger, localMessager.messager);
-        }
-        if (receiver != localMessager.messager) {
+        //}
+        //if (receiver != localMessager.messager) {
             ILnv3Bridge(localBridge.bridger).setReceiveService(remoteChainId, remoteBridge.bridger, localMessager.messager);
-        }
+        //}
     }
 
     function updateToken(
