@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {RepairConfigure17} from "../17_RepairConfigure.s.sol";
+import {BridgeConnectZircuit20} from "../20_BridgeConnectZircuit.s.sol";
 
-contract Proposal is RepairConfigure17 {}
+contract Proposal is BridgeConnectZircuit20 {}
