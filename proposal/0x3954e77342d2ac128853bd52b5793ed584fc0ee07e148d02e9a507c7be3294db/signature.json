@@ -1,0 +1,14 @@
+[
+  {
+    "signer": "0x0f14341a7f464320319025540e8fe48ad0fe5aec",
+    "signature": "0x042568dbb925dcd54fb116f46d6bd6e46297eca4877757e7c967a8319f9fa31e41308ddb9c2f9d8798faeeb15638552a6028101d5c046dd6b12f02e18cc14bac1c"
+  },
+  {
+    "signer": "0x88a39b052d477cfde47600a7c9950a441ce61cb4",
+    "signature": ""
+  },
+  {
+    "signer": "0xe59261f6d4088bcd69985a3d369ff14cc54ef1e5",
+    "signature": "0x8a595c5543aad367e8877e9098299a223901ee38b2c07bfbb2ff74bee700f2da4c06a2825b58b2946d18feeb62d12e09b578c76eb4b37c3aab7873bf840e45bb1b"
+  }
+]
