@@ -7,7 +7,7 @@
       "nonce": "5",
       "chainId": "46",
       "blockGasLimit": "20000000",
-      "blockNumber": "3490029",
+      "blockNumber": "3490613",
       "newConfig": {
         "projectName": "Helix-DAO",
         "orgId": "cluanacaw000111jik4xs4wkl",
@@ -78,7 +78,7 @@
       "arbitraryChain": false,
       "executorAddress": "0x7e16116661CA8d66C73612382833153911Fa03B1",
       "libraries": [],
-      "gitCommit": "2bd833ab6b0536ec3661968c9f2af83c4850a770",
+      "gitCommit": "015a850afa19f906ac07c6f877730e40cbedc447",
       "safeFundingRequest": {
         "fundsRequested": "0",
         "startingBalance": "1700000000000000000000"
