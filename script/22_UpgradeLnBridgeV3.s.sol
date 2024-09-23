@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import {safeconsole} from "forge-std/safeconsole.sol";
 import {LnBridgeV3Base} from "./common/LnBridgeV3Base.s.sol";
 import {HelixLnBridgeV3} from "@helix/contracts/helix-contract/contracts/ln/lnv3/HelixLnBridgeV3.sol";
 
@@ -17,6 +18,7 @@ contract UpgradeLnBridge22 is LnBridgeV3Base {
         uint256 chainId = block.chainid;
         initLnBridgeAddress();
         address bridge = bridgerInfos[chainId].bridger;
+		safeconsole.log("ChainId:", chainId);
         require(getImplementationAddress(bridge) == oldImpl, "!oldImpl");
 
         bytes memory code = type(HelixLnBridgeV3).creationCode;
