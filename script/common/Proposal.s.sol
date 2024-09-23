@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {UpgradeMsgportOnPolygon21} from "../21_UpgradeMsgportOnPolygon.s.sol";
+import {UpgradeLnBridge22} from "../22_UpgradeLnBridgeV3.s.sol";
 
-contract Proposal is UpgradeMsgportOnPolygon21 {}
+contract Proposal is UpgradeLnBridge22 {}
