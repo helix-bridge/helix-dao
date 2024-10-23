@@ -12,8 +12,8 @@ contract AddMorphArbitrum23 is LnBridgeV3Base {
         uint256 CHAINID_ARBITRUM = chainName2chainId["arbitrum"];
 
         if (block.chainid == CHAINID_MORPH) {
-            //messagerAcceptOwnership(MessagerType.MsgportType);
-            //acceptOwnership();
+            messagerAcceptOwnership(MessagerType.MsgportType);
+            acceptOwnership();
         }
 
         if (block.chainid == CHAINID_ARBITRUM) {
