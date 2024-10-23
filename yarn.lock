@@ -503,10 +503,10 @@
     ethers "^6.7.0"
     solmate "6.2.0"
 
-"@hujw77/core@^0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@hujw77/core/-/core-0.1.20.tgz#e9e29e7be899024e7c3e27381dd1c906921299c6"
-  integrity sha512-50s5bEMiyTEDLSQs1zPft889kdGbcfUSk8mkPg+bLD7knuSmzUoALQ3X9PNpAieBaz1qMBlRLBnZtGFNhBFf1A==
+"@hujw77/core@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@hujw77/core/-/core-0.1.21.tgz#f8668ae8565fdd53824e332624f72312fc9a1f7c"
+  integrity sha512-ccP/gpoogbL1JPwSxvXQsPvNwhWxm/D6T6nS0Bg7FMA3PN4PrvnlHN2s95J1rzMlpmORy9qfoRhqnzRgZKvk1g==
   dependencies:
     "@amplitude/node" "^1.10.2"
     "@eth-optimism/common-ts" "^0.7.1"
@@ -531,16 +531,16 @@
     undici "^5.21.1"
     yesno "^0.4.0"
 
-"@hujw77/plugins@0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@hujw77/plugins/-/plugins-0.1.24.tgz#2a2dfcf16245bef5dbf34c807f050e1fc662ad12"
-  integrity sha512-jK7qYYN3aHKyw0DqhCPfYKnHyDqLCq4CFGJSG229A0FSakGWlMCD0fLb25kNuUiI/gVoz+NOytVr59qdx0OKhA==
+"@hujw77/plugins@0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@hujw77/plugins/-/plugins-0.1.26.tgz#29ddde12deed32cf8818931329921739448cee4e"
+  integrity sha512-4WKDwTNLRtvn/gQgWx/MOSFm0cyYk2PkZO4yL+rnrxty+Q9qlf+LCLji+A0wE3aOwNkXzYPDVvTJMjgwDQDSfw==
   dependencies:
     "@eth-optimism/common-ts" "^0.7.1"
     "@eth-optimism/contracts" "^0.5.40"
     "@ethersproject/bignumber" "^5.7.0"
     "@hujw77/contracts" "^0.1.20"
-    "@hujw77/core" "^0.1.20"
+    "@hujw77/core" "^0.1.21"
     "@nomicfoundation/hardhat-ethers" "^3.0.5"
     "@openzeppelin/contracts" "^4.8.1"
     "@openzeppelin/hardhat-upgrades" "^1.22.1"
