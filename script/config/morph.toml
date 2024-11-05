@@ -1,0 +1,29 @@
+[base]
+name = "morph"
+chainId = 2818
+deployer = "0x9bc1C7567DDBcaF2212185b6665D755d842d01E4"
+bridgev3 = "0xCcD566F8dA3643A9948A1509cde0D0324D32d19b"
+proxyAdmin = "0x756DFD82e79E739c6e4B0CDf263ad68cF396fA3C"
+
+[messager]
+[messager.messagers]
+types = ["msgport"]
+
+[messager.msgport]
+id = 2818
+messager = "0x1d53AEaD0DFbE3A605AfEC8FF1414614277afCde"
+endpoint = "0x2cd1867Fb8016f93710B6386f7f9F1D540A60812"
+
+[token]
+[token.symbols]
+symbols = ["eth", "usdt"]
+
+[token.eth]
+address = "0x0000000000000000000000000000000000000000"
+decimals = 18
+protocolFee = 10
+
+[token.usdt]
+address = "0xc7D67A9cBB121b3b0b9c053DD9f469523243379A"
+decimals = 6
+protocolFee = 100000
