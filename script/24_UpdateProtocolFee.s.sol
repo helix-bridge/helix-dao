@@ -15,14 +15,14 @@ contract UpdateProtocolFee24 is LnBridgeV3Base {
         uint256 CHAINID_ARBITRUM = chainName2chainId["arbitrum"];
         uint256 CHAINID_OPTIMISTIC = chainName2chainId["optimistic"];
         uint256 CHAINID_SCROLL = chainName2chainId["scroll"];
-        uint256 CHAINID_BASE = chainName2chainId["base"];
+        //uint256 CHAINID_BASE = chainName2chainId["base"];
 
         uint256 chainId = block.chainid;
 
         bool hasUsdt = chainId == CHAINID_ARBITRUM || chainId == CHAINID_BSC || chainId == CHAINID_OPTIMISTIC || chainId == CHAINID_POLYGON || chainId == CHAINID_AVALANCHE || chainId == CHAINID_SCROLL;
-        bool hasEth = chainId == CHAINID_ARBITRUM || chainId == CHAINID_OPTIMISTIC || chainId == CHAINID_SCROLL || chainId == CHAINID_BASE;
+        //bool hasEth = chainId == CHAINID_ARBITRUM || chainId == CHAINID_OPTIMISTIC || chainId == CHAINID_SCROLL || chainId == CHAINID_BASE;
 
-        string[4] memory ethChains = ["arbitrum", "optimistic", "scroll", "base"];
+        //string[4] memory ethChains = ["arbitrum", "optimistic", "scroll", "base"];
         string[6] memory usdtChains = ["arbitrum", "polygon-pos", "bsc", "optimistic", "avalanche", "scroll"];
         string[9] memory allChains = ["arbitrum", "scroll", "polygon-pos", "bsc", "base", "gnosis", "optimistic", "avalanche", "mantle"];
 
