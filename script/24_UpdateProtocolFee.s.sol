@@ -55,6 +55,10 @@ contract UpdateProtocolFee24 is LnBridgeV3Base {
                 TokenInfo memory usdtRemote = getTokenFromConfigure(remoteChainId, "usdt");
                 require(usdtRemote.token != address(0), "remote usdt not configured");
                 uint256 usdtPenalty = 2 * 10 ** usdt.decimals;
+
+                if ((CHAINID_SCROLL == chainId && remoteChainId == CHAINID_AVALANCHE) || (CHAINID_AVALANCHE == chainId && remoteChainId == CHAINID_SCROLL)) {
+                    registerToken(remoteChainId, usdt.symbol, usdtRemote.symbol, usdt.protocolFee, uint112(usdtPenalty));
+                }
                 updateToken(remoteChainId, usdt.symbol, usdtRemote.symbol, usdt.protocolFee, uint112(usdtPenalty));
             }
         }
