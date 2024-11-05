@@ -26,7 +26,7 @@ protocolFee = 100000
 [token.usdc]
 address = "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83"
 decimals = 6
-protocolFee = 100000
+protocolFee = 200000
 
 [token.dai]
 address = "0x0000000000000000000000000000000000000000"

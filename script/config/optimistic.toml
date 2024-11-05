@@ -21,12 +21,12 @@ symbols = ["usdt", "usdc", "eth", "wbtc", "dai", "link"]
 [token.usdt]
 address = "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
 decimals = 6
-protocolFee = 100000
+protocolFee = 200000
 
 [token.usdc]
 address = "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85"
 decimals = 6
-protocolFee = 100000
+protocolFee = 200000
 
 [token.eth]
 address = "0x0000000000000000000000000000000000000000"
