@@ -58,8 +58,9 @@ contract UpdateProtocolFee24 is LnBridgeV3Base {
 
                 if ((CHAINID_SCROLL == chainId && remoteChainId == CHAINID_AVALANCHE) || (CHAINID_AVALANCHE == chainId && remoteChainId == CHAINID_SCROLL)) {
                     registerToken(remoteChainId, usdt.symbol, usdtRemote.symbol, usdt.protocolFee, uint112(usdtPenalty));
+                } else {
+                    updateToken(remoteChainId, usdt.symbol, usdtRemote.symbol, usdt.protocolFee, uint112(usdtPenalty));
                 }
-                updateToken(remoteChainId, usdt.symbol, usdtRemote.symbol, usdt.protocolFee, uint112(usdtPenalty));
             }
         }
 
