@@ -25,5 +25,8 @@ jobs:
         run: yarn --frozen-lockfile
       # - name: Install Sphinx Solidity Library
       #   run: yarn sphinx install
+      - name: Skip 
+        run: npx sphinx propose ./script/common/Proposal.s.sol --dry-run --networks mainnets --skip
       - name: Dry Run
         run: npx sphinx propose ./script/common/Proposal.s.sol --dry-run --networks mainnets
+
