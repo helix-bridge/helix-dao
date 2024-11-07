@@ -26,12 +26,12 @@ symbols = ["usdt", "ring", "usdc", "wbtc", "dai", "link"]
 [token.usdt]
 address = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
 decimals = 6
-protocolFee = 100000
+protocolFee = 200000
 
 [token.usdc]
 address = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
 decimals = 6
-protocolFee = 100000
+protocolFee = 200000
 
 [token.ring]
 address = "0x9C1C23E60B72Bc88a043bf64aFdb16A02540Ae8f"

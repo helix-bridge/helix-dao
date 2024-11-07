@@ -20,10 +20,13 @@ jobs:
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: nightly
+          version: nightly-7f0f5b4c1aa75dc4fd2eb15aca9757491d885902
       - name: Install Dependencies
         run: yarn --frozen-lockfile
       # - name: Install Sphinx Solidity Library
       #   run: yarn sphinx install
+      - name: Skip 
+        run: npx sphinx propose ./script/common/Proposal.s.sol --dry-run --networks mainnets --skip
       - name: Dry Run
         run: npx sphinx propose ./script/common/Proposal.s.sol --dry-run --networks mainnets
+

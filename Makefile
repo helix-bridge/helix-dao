@@ -9,6 +9,7 @@ clean  :; @forge clean
 
 propose:; npx sphinx propose ./script/common/Proposal.s.sol --networks mainnets
 dry-run:; npx sphinx propose ./script/common/Proposal.s.sol --networks mainnets --dry-run
+skip   :; npx sphinx propose ./script/common/Proposal.s.sol --networks mainnets --dry-run --skip
 
 sphinx :; @yarn sphinx install
 sync   :; @git submodule update --recursive
