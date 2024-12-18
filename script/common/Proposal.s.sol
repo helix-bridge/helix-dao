@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {AddMorphArbitrum23} from "../23_AddMorphArbitrum.s.sol";
+import {AcceptOwnership24} from "../24_AcceptOwnership.s.sol";
 
-contract Proposal is AddMorphArbitrum23 {}
+contract Proposal is AcceptOwnership24 {}
