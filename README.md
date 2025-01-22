@@ -9,3 +9,8 @@
 ```sh
 https://hujw77.github.io/test-dapp/
 ```
+
+## CoW Swap Solver Reward Address
+```sh
+0x165f90d55397cd115809A5954B42c1f8c4006EE6
+```
