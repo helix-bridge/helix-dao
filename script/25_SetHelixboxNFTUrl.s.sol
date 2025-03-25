@@ -10,12 +10,12 @@ interface III {
 }
 
 contract SetHelixboxNFTUrl is Base {
-    address nft = 0x418B17066233977aD0CFf6FB9d6029b70804C29E;
+    address nft = 0x3288D1f4bD290D3e9006aA196f1c46D035d789Bf;
 
     function run() public sphinx {
         address dao = safeAddress();
-        III(nft).setURI("ipfs://bafybeiflaokhjwqnimgoz55a274ufeyvzjiyxvnk4iucwxwmbptaaab24a/{id}.json");
-        III(nft).setBaseURI("ipfs://bafybeiflaokhjwqnimgoz55a274ufeyvzjiyxvnk4iucwxwmbptaaab24a/");
+        III(nft).setURI("ipfs://bafybeibstdzjahalez6fcrrgy6sr6szebgeybdpjay7eqda5xq6phpbnda/{id}.json");
+        III(nft).setBaseURI("ipfs://bafybeibstdzjahalez6fcrrgy6sr6szebgeybdpjay7eqda5xq6phpbnda/");
         III(nft).setURI(1, "1.json");
         III(nft).setURI(2, "2.json");
     }
