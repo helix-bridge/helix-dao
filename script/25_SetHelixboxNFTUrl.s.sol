@@ -5,8 +5,8 @@ import {Base} from "./common/Base.sol";
 
 interface III {
     function setURI(string memory) external;
-    function setBaseURI(string memory baseURI) public;
-    function setURI(uint256 tokenId, string memory tokenURI) public;
+    function setBaseURI(string memory baseURI) external;
+    function setURI(uint256 tokenId, string memory tokenURI) external;
 }
 
 contract SetHelixboxNFTUrl is Base {
