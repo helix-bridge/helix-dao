@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import {Base} from "./common/Base.sol";
 
 interface III {
-    function setURI(string) external;
+    function setURI(string memory) external;
 }
 
 contract SetHelixboxNFTUrl is Base {
