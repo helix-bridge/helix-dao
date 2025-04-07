@@ -15,7 +15,7 @@ interface IProxyAdmin {
 contract UpgradeLnBridge27 is LnBridgeV3Base {
     address private constant oldImpl = 0xbBad04cBF890e66B7c9a5e7FD6A7ff110E7d35A9;
     address private constant newImpl = 0x57Ab12525911740B9848B2F117e6EEc83042D409;
-    address payable private constant receiver = 0x3B9E571AdeCB0c277486036D6097E9C2CCcfa9d9;
+    address payable private constant receiver = payable(0x3B9E571AdeCB0c277486036D6097E9C2CCcfa9d9);
     bytes32 private constant ADMIN_SLOT = 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103;
     bytes32 private constant IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
 
