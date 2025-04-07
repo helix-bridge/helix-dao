@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {TransferOwnership26} from "../26_TransferOwnership.s.sol";
+import {UpgradeLnBridge27} from "../27_UpgradeLnBridge.s.sol";
 
-contract Proposal is TransferOwnership26 {}
+contract Proposal is UpgradeLnBridge27 {}
