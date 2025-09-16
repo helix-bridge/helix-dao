@@ -7,6 +7,6 @@ import "@sphinx-labs/contracts/SphinxPlugin.sol";
 contract Base is Sphinx, Script {
     function configureSphinx() public override {
         sphinxConfig.projectName = "Helix-DAO";
-        sphinxConfig.mainnets = ["astar-zkevm"];
+        sphinxConfig.mainnets = ["ethereum", "avalanche", "base", "blast", "bnb", "crab", "darwinia", "gnosis", "mantle", "moonbeam", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "zircuit", "morph", "linea"];
     }
 }

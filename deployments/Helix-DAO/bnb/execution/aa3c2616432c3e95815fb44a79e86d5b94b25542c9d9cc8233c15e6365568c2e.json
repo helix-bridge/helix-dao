@@ -1,0 +1,65 @@
+{
+	"_format": "sphinx-sol-execution-artifact-1",
+	"transactions": [],
+	"merkleRoot": "0xaa3c2616432c3e95815fb44a79e86d5b94b25542c9d9cc8233c15e6365568c2e",
+	"solcInputHashes": [],
+	"safeAddress": "0xD0a0899c5dc2FEb253D57Ab0b7c6d1b1Fcbbf824",
+	"moduleAddress": "0x6dD645A2cC61713Bf1CBB369652e0a36c3996Fb2",
+	"executorAddress": "0x7e16116661CA8d66C73612382833153911Fa03B1",
+	"nonce": "10",
+	"chainId": "56",
+	"actions": [
+		{
+			"to": "0xD0a0899c5dc2FEb253D57Ab0b7c6d1b1Fcbbf824",
+			"value": "0",
+			"txData": "0xe318b52b00000000000000000000000088a39b052d477cfde47600a7c9950a441ce61cb4000000000000000000000000e59261f6d4088bcd69985a3d369ff14cc54ef1e5000000000000000000000000570fca2c6f902949dbb90664be5680fec94a84f6",
+			"gas": "164593",
+			"operation": 0,
+			"requireSuccess": true
+		}
+	],
+	"sphinxConfig": {
+		"projectName": "Helix-DAO",
+		"orgId": "cluanacaw000111jik4xs4wkl",
+		"owners": [
+			"0x00E3993566b34e5367d1C602439997BD08c11FF7",
+			"0x0f14341A7f464320319025540E8Fe48Ad0fe5aec",
+			"0x52386BE2397e8EAc26298F733b390684203fB580",
+			"0x88a39B052d477CfdE47600a7C9950a441Ce61cb4",
+			"0xe59261f6D4088BcD69985A3D369Ff14cC54EF1E5"
+		],
+		"mainnets": [
+			"ethereum",
+			"avalanche",
+			"base",
+			"blast",
+			"bnb",
+			"crab",
+			"darwinia",
+			"gnosis",
+			"mantle",
+			"moonbeam",
+			"optimistic",
+			"polygon-pos",
+			"polygon-zkevm",
+			"scroll",
+			"zircuit",
+			"morph",
+			"linea"
+		],
+		"testnets": [],
+		"threshold": "3",
+		"saltNonce": "0"
+	},
+	"executionMode": 2,
+	"initialState": {
+		"isSafeDeployed": true,
+		"isModuleDeployed": true,
+		"isExecuting": false
+	},
+	"unlabeledContracts": [],
+	"arbitraryChain": false,
+	"libraries": [],
+	"gitCommit": "b60e9489f3bc1dcdadf97514a7cad23882ba9902",
+	"safeInitData": null
+}
