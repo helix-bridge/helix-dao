@@ -28,7 +28,7 @@ contract UpgradeXTokenBridge29 is LnBridgeV3Base {
 			address admin = getAdminAddress(backing);
 			IProxyAdmin(admin).upgrade(backing, newImpl);
 			require(getImplementationAddress(backing) == newImpl, "!upgrade");
-			III(backing).withdraw(receiver, xring, III(xring).balanceOf(backing));
+			III(backing).withdraw(xring, receiver, III(xring).balanceOf(backing));
 		}
     }
 
