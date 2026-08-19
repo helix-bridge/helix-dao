@@ -8,6 +8,6 @@ contract Base is Sphinx, Script {
     function configureSphinx() public override {
         sphinxConfig.projectName = "Helix-DAO";
         // sphinxConfig.mainnets = ["ethereum", "avalanche", "base", "blast", "bnb", "crab", "darwinia", "gnosis", "mantle", "moonbeam", "optimistic", "polygon-pos", "polygon-zkevm", "scroll", "zircuit", "morph", "linea"];
-        sphinxConfig.mainnets = ["darwinia"];
+        sphinxConfig.mainnets = ["polygon", "arbitrum"];
     }
 }
