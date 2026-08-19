@@ -1,5 +1,5 @@
 [profile.default]
-solc_version = "0.8.17"
+solc_version = "0.8.24"
 script = 'script'
 test = 'test'
 extra_output = ['storageLayout']
@@ -29,7 +29,7 @@ astar-zkevm = "https://rpc-zkevm.astar.network"
 crab = "https://crab-rpc.darwinia.network"
 scroll = "https://rpc.scroll.io"
 avalanche = "https://avalanche.drpc.org"
-polygon-pos = "https://1rpc.io/matic"
+polygon-pos = "https://polygon.drpc.org"
 optimistic = "https://optimism.drpc.org"
 arbitrum = "https://arbitrum.drpc.org"
 bnb = "https://bsc.drpc.org"
