@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {SunsetArbitrumPolygon} from "../30_SunsetArbitrumPolygon.s.sol";
+import {UpgradeLnBridge27} from "../27_UpgradeLnBridgeV3.s.sol";
 
-contract Proposal is SunsetArbitrumPolygon {}
+contract Proposal is UpgradeLnBridge27 {}
